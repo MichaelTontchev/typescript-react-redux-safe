@@ -5,6 +5,9 @@ import { IWebsiteProperties } from '../IState';
 import { ICatchallAction } from '../Actions/CatchallAction';
 import { IChangeWebsiteNameAction, CHANGE_WEBSITE_NAME } from '../Actions/ChangeWebsiteNameAction';
 
+// Specifying what action types we accept allows us to use type guards in our reducer by checking against the
+// type literals we have in the actions.
+
 type PossibleWebsitePropertiesReducerActions =
 	IChangeWebsiteNameAction |
 	ICatchallAction;
@@ -18,7 +21,7 @@ export const websitePropertiesReducer: IImmutableReducer<IWebsiteProperties> =
 		action: PossibleWebsitePropertiesReducerActions) => {
 		switch (action.type) {
 			case CHANGE_WEBSITE_NAME:
-				const newState = {...state};
+				const newState = {...state}; // Always clone your state - never mutate it directly!
 
 				const newName = action.payload;
 

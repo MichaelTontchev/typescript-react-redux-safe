@@ -1,5 +1,3 @@
-import { Immutable, ImmutableArray } from 'seamless-immutable';
-
 export interface IState {
 	myStuff: {
 		clickCounts: number;

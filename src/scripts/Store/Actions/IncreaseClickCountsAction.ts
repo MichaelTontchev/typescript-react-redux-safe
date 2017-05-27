@@ -5,7 +5,7 @@ import { IAction } from './IAction';
 export const INCREASE_CLICK_COUNTS = 'INCREASE_CLICK_COUNTS';
 
 export interface IIncreaseClickCountsAction extends IAction<number> {
-	type: 'INCREASE_CLICK_COUNTS';
+	type: 'INCREASE_CLICK_COUNTS';// Replace default Action implementation in Redux to use a Flux Standard Actions with seamless-immutable
 	payload: Immutable<number>;
 };
 

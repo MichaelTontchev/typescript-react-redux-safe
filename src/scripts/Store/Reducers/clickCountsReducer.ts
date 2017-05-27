@@ -4,6 +4,9 @@ import { IImmutableReducer } from '../../ReduxIntegration/IImmutableReducer';
 import { ICatchallAction } from '../Actions/CatchallAction';
 import { IIncreaseClickCountsAction, INCREASE_CLICK_COUNTS } from '../Actions/IncreaseClickCountsAction';
 
+// Specifying what action types we accept allows us to use type guards in our reducer by checking against the
+// type literals we have in the actions.
+
 type PossibleClickCountsReducerActions =
 	IIncreaseClickCountsAction |
 	ICatchallAction;
