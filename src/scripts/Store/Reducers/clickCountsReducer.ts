@@ -1,9 +1,8 @@
 import * as SeamlessImmutable from 'seamless-immutable';
 import { Immutable } from 'seamless-immutable';
 import { IImmutableReducer } from '../../ReduxIntegration/IImmutableReducer';
-import { IWebsiteProperties } from '../IState';
 import { ICatchallAction } from '../Actions/CatchallAction';
-import { IIncreaseClickCountsAction, INCREASE_CLICK_COUNTS } from '../Actions/IncrementClickCountsAction';
+import { IIncreaseClickCountsAction, INCREASE_CLICK_COUNTS } from '../Actions/IncreaseClickCountsAction';
 
 type PossibleClickCountsReducerActions =
 	IIncreaseClickCountsAction |

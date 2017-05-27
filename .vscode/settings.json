@@ -9,5 +9,6 @@
 	"scss.lint.important": "warning",
 	"scss.lint.idSelector": "warning",
 	"php.validate.executablePath": "C:\\wamp64\\bin\\php\\php5.6.25\\php.exe",
-	"editor.formatOnPaste": true
+	"editor.formatOnPaste": true,
+	"vsicons.presets.angular": false
 }

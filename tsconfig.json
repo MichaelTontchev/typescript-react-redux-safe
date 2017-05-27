@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"noImplicitAny": true,
+		"target": "es5",
+		"jsx": "react",
+		"alwaysStrict": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"pretty": true,
+		"removeComments": true,
+		"strictNullChecks": true
+	}
+}
