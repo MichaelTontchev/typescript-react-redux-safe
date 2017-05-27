@@ -8,7 +8,7 @@ export const Example = () => (
 		<h3>Low prices on component re-renders!</h3>
 		<p>One of the nice things about Redux's reliance on immutability is that when connected with
 			React, it overrides shouldComponentUpdate by doing a shallow reference comparison
-			on the state and props to see whether a component should rerender. If the reference
+			on the props to see whether a component should rerender. If the reference
 			of the state and props is the same, it will not rerender the component, saving you
 			those sweet, sweet CPU cycles! :) See below!
 		</p>
