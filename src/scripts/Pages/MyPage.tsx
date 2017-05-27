@@ -35,20 +35,12 @@ class MyPage extends React.PureComponent<IMyPageStateProps & IMyPageDispatchProp
 		return (
 			<div className="myPage">
 				<div>
-					<h2>Michael's Redux Emporium And More</h2>
-					<h3>Low prices on component re-renders!</h3>
-					<p>One of the nice things about Redux's reliance on immutability is that when connected with
-						React, it overrides shouldComponentUpdate by doing a shallow reference comparison
-						on the state and props to see whether a component should rerender. If the reference
-						of the state and props is the same, it will not rerender the component, saving you
-						those sweet, sweet CPU cycles! :) See below!
-					</p>
 					<h3>Click count: {this.props.clickCounts}</h3>
 				</div>
 				<div>
-					Notice in the source code that MyPage relies on clickCount, which is only part of the Redux state.
-					When you increase the click count, the inner element below doesn't update, even though
-					it's a child element! (see console for notifications of rerenders)
+					Notice in the source code that MyPage relies on clickCount, which is only one part of the Redux state.
+					When you increase the click count, <strong>the inner element below doesn't update, even though
+					it's a child element</strong>! (see console for notifications of rerenders)
 					<br />
 					<button onClick={this.increaseClickCounts}>Increase click count!</button>
 					<br />
@@ -72,7 +64,7 @@ class MyPage extends React.PureComponent<IMyPageStateProps & IMyPageDispatchProp
 	}
 }
 
-export const MyPageContainer = connect<IMyPageStateProps, IMyPageDispatchProps, {}>(
+export const MyPageReduxContainer = connect<IMyPageStateProps, IMyPageDispatchProps, {}>(
 	mapStateToProps,
 	dispatchPropsToActionCreatorMap,
 )(MyPage);

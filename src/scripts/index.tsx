@@ -2,12 +2,12 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { store } from './Store/Store';
-import { MyPageContainer } from './Pages/MyPage';
+import { Example } from './Pages/Example';
 
 ReactDOM.render(
 	(
 		<Provider store={store}>
-			<MyPageContainer />
+			<Example />
 		</Provider>
 	),
 	document.getElementById('outermostContainer'),
